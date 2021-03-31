@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>math_game_v2</title>
+    <style>
+        .main{
+            width: 600px;
+            height: 800px;
+            border: 2px solid green;
+        }
+
+        .TopBar{
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            width: 600px;
+            height: 80px;                           
+            padding-top: 20px;
+            color:rgb(233, 123, 21)
+        }
+
+        .Quiz{
+            width: 600px;
+            height: 135px;
+            padding-top: 15px;
+            color: rgb(0, 0, 187);
+            font-size: 90px;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .Play{
+            width: 600px;
+            height: 500px;
+            text-align: center;
+            padding-top: 50px;
+            margin: none;
+            border: none;
+        }
+        
+        button {
+            border: none;
+            padding: none;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+        }
+        
+        button:active{
+            box-shadow: 0 5px #666;
+            transform: translate(4px);
+        }
+
+        button:focus{
+            outline: none;
+        }
+    </style>
+
+    <script>
+        var num1 = Math.floor((Math.random() * 4) + 1);
+        var num2 = Math.floor((Math.random() * 4) + 1);
+
+        window.onload = new_Quiz;
+
+        function checkAnswer(buttonID)
+        {console.log(buttonID);
+            if ((num1 + num2) == parseInt(buttonID)){
+                document.getElementById("message").innerHTML = "<span style='color: green;'>Well done!</span>";
+                new_Quiz();
+            }
+            else{
+                document.getElementById("message").innerHTML = "<span style='color: red;'>Sorry! Wrong!</span>";
+            }
+
+        }
+
+        function new_Quiz(){
+            num1 = Math.floor((Math.random() * 4) + 1);
+            num2 = Math.floor((Math.random() * 4) + 1);
+            document.getElementById("question").innerHTML = num1.toString() + " + " + num2.toString() + " = ?";
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="TopBar" id="message">Quiz Starts!</div>
+        <div class="Quiz" id="question"></div>
+        <div class="Play">
+            <button onclick="checkAnswer(this.id)" id="1" style="background: url(images/images/number1.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="2" style="background: url(images/images/number2.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="3" style="background: url(images/images/number3.png);background-size: contain;"></button>
+            <br>
+            <button onclick="checkAnswer(this.id)" id="4" style="background: url(images/images/number4.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="5" style="background: url(images/images/number5.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="6" style="background: url(images/images/number6.png);background-size: contain;"></button>
+            <br>
+            <button onclick="checkAnswer(this.id)" id="7" style="background: url(images/images/number7.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="8" style="background: url(images/images/number8.png);background-size: contain;"></button>
+            <button onclick="checkAnswer(this.id)" id="9" style="background: url(images/images/number9.png);background-size: contain;"></button>
+            <br>
+            <button onclick="checkAnswer(this.id)" id="0" style="background: url(images/images/number0.png);background-size: contain;"></button>
+        </div>
+    </div>
+</body>
+</html>
