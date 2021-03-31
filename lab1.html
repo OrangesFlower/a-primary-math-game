@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main{
+            width: 600px;
+            height: 800px;
+            border: 2px solid green;
+        }
+
+        .TopBar{
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            width: 600px;
+            height: 80px;                           
+            padding-top: 20px;
+            color:rgb(233, 123, 21)
+        }
+
+        .Quiz{
+            width: 600px;
+            height: 135px;
+            padding-top: 15px;
+            color: rgb(0, 0, 187);
+            font-size: 90px;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .Play{
+            width: 600px;
+            height: 500px;
+            text-align: center;
+            padding-top: 50px;
+            margin: none;
+            border: none;
+        }
+        
+        button {
+            border: none;
+            padding: none;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+        }
+        
+        button:active{
+            box-shadow: 0 5px #666;
+            transform: translate(4px);
+        }
+
+        button:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="TopBar">Quiz Starts!</div>
+        <div class="Quiz">3 + 2 = ?</div>
+        <div class="Play">
+            <button style="background: url(images/images/number1.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number2.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number3.png);background-size: contain;"></button>
+            <br>
+            <button style="background: url(images/images/number4.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number5.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number6.png);background-size: contain;"></button>
+            <br>
+            <button style="background: url(images/images/number7.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number8.png);background-size: contain;"></button>
+            <button style="background: url(images/images/number9.png);background-size: contain;"></button>
+            <br>
+            <button style="background: url(images/images/number0.png);background-size: contain;"></button>
+        </div>
+    </div>
+</body>
+</html>
